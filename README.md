@@ -2,7 +2,7 @@
 
 https://rahul-hingve.notion.site/Meeting-Application-31af81f60f134aaa85b31e4721f09175?pvs=4
 
-# Turborepo Tailwind CSS starter
+# Turborepo  starter
 
 This is an official starter Turborepo.
 
