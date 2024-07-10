@@ -3,6 +3,6 @@ module.exports = {
   reactStrictMode: true,
   transpilePackages: ["@repo/ui"],
   typescript:{
-    ignoreBuildErrors
+    ignoreBuildErrors:true
   }
 };
