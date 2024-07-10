@@ -315,6 +315,7 @@ export default function LandingPage() {
             Support
           </Link>
         </nav>
+        <p className="text-sm mt-4 md:mt-0">Made with ❤️ by Rahul</p>
         <p className="text-sm mt-4 md:mt-0">&copy; 2024 MeetHub. All rights reserved.</p>
       </footer>
     </div>
