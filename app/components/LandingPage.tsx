@@ -174,8 +174,8 @@ export default function LandingPage() {
                 <div className="rounded-lg bg-muted p-6 shadow-lg motion-safe:animate-fadeInUp">
                   <blockquote className="space-y-4">
                     <p className="text-lg font-medium">
-                      "MeetHub has been a game-changer for our team. The seamless\n video and collaboration features
-                      have made our remote\n meetings much more productive."
+                    &quot;MeetHub has been a game-changer for our team. The seamless\n video and collaboration features
+                      have made our remote\n meetings much more productive.&quot;
                     </p>
                     <div className="flex items-center">
                       <Avatar>
@@ -192,8 +192,8 @@ export default function LandingPage() {
                 <div className="rounded-lg bg-muted p-6 shadow-lg motion-safe:animate-fadeInUp">
                   <blockquote className="space-y-4">
                     <p className="text-lg font-medium">
-                      "MeetHub has streamlined our meeting management process.\n The scheduling and recording features
-                      have been a\n lifesaver for our team."
+                    &quot;MeetHub has streamlined our meeting management process.\n The scheduling and recording features
+                      have been a\n lifesaver for our team.&quot;
                     </p>
                     <div className="flex items-center">
                       <Avatar>
@@ -210,8 +210,8 @@ export default function LandingPage() {
                 <div className="rounded-lg bg-muted p-6 shadow-lg motion-safe:animate-fadeInUp">
                   <blockquote className="space-y-4">
                     <p className="text-lg font-medium">
-                      "MeetHub has transformed the way we collaborate as a team.\n The real-time chat and screen sharing
-                      features have\n been invaluable."
+                    &quot;MeetHub has transformed the way we collaborate as a team.\n The real-time chat and screen sharing
+                      features have\n been invaluable.&quot;
                     </p>
                     <div className="flex items-center">
                       <Avatar>
@@ -234,7 +234,7 @@ export default function LandingPage() {
             <div className="space-y-8 text-center">
               <div>
                 <h2 className="text-3xl font-bold sm:text-4xl">Flexible Pricing for Your Needs</h2>
-                <p className="mt-4 text-muted-foreground">Choose the plan that best suits your team's requirements.</p>
+                <p className="mt-4 text-muted-foreground">Choose the plan that best suits your team&apos;s requirements.</p>
               </div>
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 <div className="rounded-lg bg-background p-6 shadow-lg motion-safe:animate-fadeInUp">
