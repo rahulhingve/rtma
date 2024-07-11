@@ -16,35 +16,35 @@ export default function LandingPage() {
   return (
     <div className="flex min-h-[100dvh] flex-col bg-background">
       <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm">
-        <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div className="animate-slidein [--slidein-delay:100ms] opacity-0 container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
             <VideoIcon className="h-8 w-8" />
             <span className="text-xl font-bold">MeetHub</span>
           </Link>
           <nav className="hidden space-x-4 md:flex">
             <Link
-              href="#"
+              href="#features"
               className="rounded-md px-3 py-2 text-sm font-medium hover:bg-muted hover:text-foreground"
               prefetch={false}
             >
               Features
             </Link>
             <Link
-              href="#"
+              href="#testimonials"
               className="rounded-md px-3 py-2 text-sm font-medium hover:bg-muted hover:text-foreground"
               prefetch={false}
             >
               Testimonials
             </Link>
             <Link
-              href="#"
+              href="#pricing"
               className="rounded-md px-3 py-2 text-sm font-medium hover:bg-muted hover:text-foreground"
               prefetch={false}
             >
               Pricing
             </Link>
             <Link
-              href="#"
+              href="#contact"
               className="rounded-md px-3 py-2 text-sm font-medium hover:bg-muted hover:text-foreground"
               prefetch={false}
             >
@@ -72,16 +72,16 @@ export default function LandingPage() {
         </div>
       </header>
       <main>
-        <section className="bg-gradient-to-r from-primary to-secondary py-20 text-primary-foreground">
+        <section className="animate-slidein [--slidein-delay:100ms] opacity-0 bg-gradient-to-r from-primary to-secondary py-20 text-primary-foreground">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
               <div className="space-y-6 motion-safe:animate-fadeInLeft">
-                <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl">Simplify Your Meetings with MeetHub</h1>
-                <p className="text-lg">
+                <h1 className="animate-slidein [--slidein-delay:300ms] opacity-0 text-4xl font-bold sm:text-5xl lg:text-6xl">Simplify Your Meetings with MeetHub</h1>
+                <p className="animate-slidein [--slidein-delay:500ms] opacity-0  text-lg ">
                   Experience seamless video conferencing, real-time collaboration, and effortless meeting management
                   with MeetHub.
                 </p>
-                <div className="flex gap-4">
+                <div className="animate-slidein [--slidein-delay:700ms] opacity-0 flex gap-4">
                   <Link
                     href="#"
                     className="rounded-md border bg-primary-foreground px-6 py-3 text-sm font-medium text-primary transition-colors   hover:border hover:text-foreground hover:bg-primary hover:border-primary-foreground "
@@ -98,7 +98,7 @@ export default function LandingPage() {
                   </Link>
                 </div>
               </div>
-              <div className="flex items-center justify-center motion-safe:animate-fadeInRight">
+              <div className="animate-slidein [--slidein-delay:400ms] opacity-0 flex items-center justify-center motion-safe:animate-fadeInRight">
                 <img
                   src="/LandingImg.jpg"
                   alt="MeetHub Hero Image"
@@ -112,15 +112,15 @@ export default function LandingPage() {
         </section>
         <section id="features" className="bg-muted py-20 motion-safe:animate-fadeInUp">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="space-y-8 text-center">
+            <div className="animate-slidein [--slidein-delay:100ms] opacity-0 space-y-8 text-center">
               <div>
-                <h2 className="text-3xl font-bold sm:text-4xl">Powerful Features for Seamless Meetings</h2>
-                <p className="mt-4 text-muted-foreground">
+                <h2 className="animate-slidein [--slidein-delay:300ms] opacity-0 text-3xl font-bold sm:text-4xl">Powerful Features for Seamless Meetings</h2>
+                <p className="animate-slidein [--slidein-delay:350ms] opacity-0 mt-4 text-muted-foreground">
                   MeetHub offers a comprehensive suite of tools to enhance your virtual meetings.
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                <div className="rounded-lg bg-background p-6 shadow-lg motion-safe:animate-fadeInUp">
+                <div className="animate-slidein [--slidein-delay:500ms] opacity-0 rounded-lg bg-background p-6 shadow-lg motion-safe:animate-fadeInUp">
                   <VideoIcon className="h-8 w-8 text-primary" />
                   <h3 className="mt-4 text-xl font-bold">Seamless Video Calls</h3>
                   <p className="mt-2 text-muted-foreground">
@@ -128,35 +128,35 @@ export default function LandingPage() {
                     participants.
                   </p>
                 </div>
-                <div className="rounded-lg bg-background p-6 shadow-lg motion-safe:animate-fadeInUp">
+                <div className="animate-slidein [--slidein-delay:500ms] opacity-0 rounded-lg bg-background p-6 shadow-lg motion-safe:animate-fadeInUp">
                   <CalendarIcon className="h-8 w-8 text-primary" />
                   <h3 className="mt-4 text-xl font-bold">Easy Scheduling</h3>
                   <p className="mt-2 text-muted-foreground">
                     Seamlessly integrate MeetHub with your calendar to schedule and manage meetings with ease.
                   </p>
                 </div>
-                <div className="rounded-lg bg-background p-6 shadow-lg motion-safe:animate-fadeInUp">
+                <div className="animate-slidein [--slidein-delay:500ms] opacity-0 rounded-lg bg-background p-6 shadow-lg motion-safe:animate-fadeInUp">
                   <ShareIcon className="h-8 w-8 text-primary" />
                   <h3 className="mt-4 text-xl font-bold">Screen Sharing</h3>
                   <p className="mt-2 text-muted-foreground">
                     Share your screen, collaborate on documents, and present ideas in real-time during your meetings.
                   </p>
                 </div>
-                <div className="rounded-lg bg-background p-6 shadow-lg motion-safe:animate-fadeInUp">
+                <div className="animate-slidein [--slidein-delay:500ms] opacity-0 rounded-lg bg-background p-6 shadow-lg motion-safe:animate-fadeInUp">
                   <WebcamIcon className="h-8 w-8 text-primary" />
                   <h3 className="mt-4 text-xl font-bold">Real-Time Collaboration</h3>
                   <p className="mt-2 text-muted-foreground">
                     Engage in real-time chat, share files, and collaborate seamlessly with your team during meetings.
                   </p>
                 </div>
-                <div className="rounded-lg bg-background p-6 shadow-lg motion-safe:animate-fadeInUp">
+                <div className="animate-slidein [--slidein-delay:500ms] opacity-0 rounded-lg bg-background p-6 shadow-lg motion-safe:animate-fadeInUp">
                   <RepeatIcon className="h-8 w-8 text-primary" />
                   <h3 className="mt-4 text-xl font-bold">Meeting Recording</h3>
                   <p className="mt-2 text-muted-foreground">
                     Record your meetings and access them later for review or to share with team members.
                   </p>
                 </div>
-                <div className="rounded-lg bg-background p-6 shadow-lg motion-safe:animate-fadeInUp">
+                <div className="animate-slidein [--slidein-delay:500ms] opacity-0 rounded-lg bg-background p-6 shadow-lg motion-safe:animate-fadeInUp">
                   <LockIcon className="h-8 w-8 text-primary" />
                   <h3 className="mt-4 text-xl font-bold">Secure Authentication</h3>
                   <p className="mt-2 text-muted-foreground">
@@ -168,7 +168,7 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-        <section id="testimonials" className="bg-background py-20 motion-safe:animate-fadeInUp">
+        <section id="testimonials" className="animate-slidein [--slidein-delay:500ms] opacity-0 bg-background py-20 motion-safe:animate-fadeInUp">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="space-y-8 text-center">
               <div>
@@ -236,7 +236,7 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-        <section id="pricing" className="bg-muted py-20 motion-safe:animate-fadeInUp">
+        <section id="pricing" className="animate-slidein [--slidein-delay:500ms] opacity-0 bg-muted py-20 motion-safe:animate-fadeInUp">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="space-y-8 text-center">
               <div>
@@ -308,7 +308,7 @@ export default function LandingPage() {
             </div>
           </div>
         </section>
-        <section id="contact" className="bg-muted py-12 md:py-24 lg:py-32">
+        <section id="contact" className="animate-slidein [--slidein-delay:300ms] opacity-0 bg-muted py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6 space-y-8 text-center">
             <div className="space-y-4">
               <h2 className="text-3xl md:text-4xl font-bold">Get in Touch</h2>

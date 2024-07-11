@@ -8,26 +8,26 @@ export function LoginPage() {
 
 
   return (
-    <div className="flex min-h-[100dvh] flex-col items-center justify-center bg-gradient-to-br from-[#ffd1dc] to-[#d1e4ff] px-4 py-12 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-md space-y-6">
-        <div className="flex justify-center">
-          <DotIcon className="h-12 w-12 text-primary" />
+    <div className="animate-slidein [--slidein-delay:40ms] opacity-0 flex min-h-[100dvh] flex-col items-center justify-center bg-gradient-to-br from-[#ffd1dc] to-[#d1e4ff] px-4 py-12 sm:px-6 lg:px-8">
+      <div className="animate-slidein [--slidein-delay:100ms] opacity-0 mx-auto max-w-md space-y-6">
+        <div className="animate-slidein [--slidein-delay:210ms] opacity-0 flex justify-center">
+          <VideoIcon className="animate-slidein [--slidein-delay:220ms] opacity-0 h-12 w-12 " /><DotIcon className="animate-slidein [--slidein-delay:320ms] opacity-0 h-12 w-12 "/>
         </div>
         <div className="space-y-2 text-center">
-          <h1 className="text-3xl font-bold">Welcome to MeetHub</h1>
-          <p className="text-muted-foreground">Please log in to access your account.</p>
+          <h1 className="animate-slidein [--slidein-delay:330ms] opacity-0 text-3xl font-bold">Welcome to MeetHub</h1>
+          <p className="animate-slidein [--slidein-delay:340ms] opacity-0 text-muted-foreground">Please log in to access your account.</p>
         </div>
-        <div className="space-y-4">
-          <Button onClick={()=>{signIn("google")}} variant="outline" className="w-full">
+        <div className="a space-y-4">
+          <Button onClick={()=>{signIn("google")}} variant="outline" className="animate-slidein [--slidein-delay:450ms] opacity-0 w-full">
             <ChromeIcon className="mr-2 h-5 w-5" />
             Sign in with Google
           </Button>
-          <Button onClick={()=>{signIn("github")}} variant="outline" className="w-full">
+          <Button onClick={()=>{signIn("github")}} variant="outline" className="animate-slidein [--slidein-delay:480ms] opacity-0 w-full">
             <GitlabIcon className="mr-2 h-5 w-5" />
             Sign in with GitHub
           </Button>
         </div>
-        <div className="text-center text-sm text-muted-foreground">
+        <div className="animate-slidein [--slidein-delay:530ms] opacity-0 text-center text-sm text-muted-foreground">
           <Link href="#" className="underline" prefetch={false}>
             Privacy Policy
           </Link>
@@ -60,6 +60,26 @@ function ChromeIcon(props) {
   )
 }
 
+
+function VideoIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" />
+      <rect x="2" y="6" width="14" height="12" rx="2" />
+    </svg>
+  )
+}
 
 function DotIcon(props) {
   return (

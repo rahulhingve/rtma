@@ -70,7 +70,21 @@ const config: Config = {
               "to": {
                 "height": "0"
               }
-            }
+            },
+            slidein:{
+              from:{
+                  opacity:"0",
+                  transform:"translateY(-10px)",
+              },
+              to:{
+                opacity:"1",
+                transform:"translateY(0)",
+              },
+
+            },
+          },
+          animation:{
+            slidein:"slidein 1s ease var(--slidein-delay, 0) forwards",
           }
 },
   plugins: [require("tailwindcss-animate")],
