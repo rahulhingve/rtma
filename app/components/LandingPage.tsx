@@ -100,7 +100,7 @@ export default function LandingPage() {
               </div>
               <div className="flex items-center justify-center motion-safe:animate-fadeInRight">
                 <img
-                  src="landingImg.jpg"
+                  src="/LandingImg.jpg"
                   alt="MeetHub Hero Image"
                   width={600}
                   height={400}
