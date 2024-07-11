@@ -1,4 +1,5 @@
-
+'use client'
+import Image from "next/image"
 
 import Link from "next/link"
 import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar"
@@ -6,8 +7,12 @@ import { Avatar, AvatarImage, AvatarFallback } from "./ui/avatar"
 import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
+import { signOut, useSession } from "next-auth/react"
+import { authOptions } from "../(pages)/api/auth/[...nextauth]/options"
 
 export default function LandingPage() {
+  const { data: session } = useSession(authOptions);
+
   return (
     <div className="flex min-h-[100dvh] flex-col bg-background">
       <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm">
@@ -46,21 +51,23 @@ export default function LandingPage() {
               Contact
             </Link>
           </nav>
-          <div className="flex items-center gap-2">
-            <Link
-              href="#"
-              className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+          <div className="">
+            {session ? <div className="flex items-center gap-2">Hello&nbsp;<b>{session.user?.name}</b>  <Avatar ><AvatarImage className="rounded-lg" src={session.user?.image}/><AvatarFallback>{session.user?.name[0]}</AvatarFallback></Avatar> <Button onClick={()=>{
+              signOut()
+            }}>Logout</Button>  </div> : <div className=" flex items-center gap-2"><Link
+              href="/signin"
+              className="rounded-md  bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               prefetch={false}
             >
               Log in
             </Link>
-            <Link
-              href="#"
-              className="rounded-md bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground transition-colors hover:bg-secondary/90 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
-              prefetch={false}
-            >
-              Sign up
-            </Link>
+              <Link
+                href="/signin"
+                className="rounded-md bg-secondary px-4 py-2 text-sm font-medium text-secondary-foreground transition-colors hover:bg-secondary/90 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
+                prefetch={false}
+              >
+                Sign up
+              </Link></div>}
           </div>
         </div>
       </header>
@@ -77,7 +84,7 @@ export default function LandingPage() {
                 <div className="flex gap-4">
                   <Link
                     href="#"
-                    className="rounded-md bg-primary-foreground px-6 py-3 text-sm font-medium text-primary transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                    className="rounded-md border bg-primary-foreground px-6 py-3 text-sm font-medium text-primary transition-colors   hover:border hover:text-foreground hover:bg-primary hover:border-primary-foreground "
                     prefetch={false}
                   >
                     Get Started
@@ -93,7 +100,7 @@ export default function LandingPage() {
               </div>
               <div className="flex items-center justify-center motion-safe:animate-fadeInRight">
                 <img
-                  src=""
+                  src="./landingImg.jpg"
                   alt="MeetHub Hero Image"
                   width={600}
                   height={400}
@@ -174,7 +181,7 @@ export default function LandingPage() {
                 <div className="rounded-lg bg-muted p-6 shadow-lg motion-safe:animate-fadeInUp">
                   <blockquote className="space-y-4">
                     <p className="text-lg font-medium">
-                    &quot;MeetHub has been a game-changer for our team. The seamless\n video and collaboration features
+                      &quot;MeetHub has been a game-changer for our team. The seamless\n video and collaboration features
                       have made our remote\n meetings much more productive.&quot;
                     </p>
                     <div className="flex items-center">
@@ -192,7 +199,7 @@ export default function LandingPage() {
                 <div className="rounded-lg bg-muted p-6 shadow-lg motion-safe:animate-fadeInUp">
                   <blockquote className="space-y-4">
                     <p className="text-lg font-medium">
-                    &quot;MeetHub has streamlined our meeting management process.\n The scheduling and recording features
+                      &quot;MeetHub has streamlined our meeting management process.\n The scheduling and recording features
                       have been a\n lifesaver for our team.&quot;
                     </p>
                     <div className="flex items-center">
@@ -210,7 +217,7 @@ export default function LandingPage() {
                 <div className="rounded-lg bg-muted p-6 shadow-lg motion-safe:animate-fadeInUp">
                   <blockquote className="space-y-4">
                     <p className="text-lg font-medium">
-                    &quot;MeetHub has transformed the way we collaborate as a team.\n The real-time chat and screen sharing
+                      &quot;MeetHub has transformed the way we collaborate as a team.\n The real-time chat and screen sharing
                       features have\n been invaluable.&quot;
                     </p>
                     <div className="flex items-center">
@@ -278,7 +285,24 @@ export default function LandingPage() {
                   <Button className="mt-6 w-full">Get Started</Button>
                 </div>
                 <div className="rounded-lg bg-background p-6 shadow-lg motion-safe:animate-fadeInUp">
-                  <h3 className="text-xl font-" />
+                  <h3 className="text-xl font-bold">Unlimited</h3>
+                  <p className="mt-4 text-4xl font-bold">get price</p>
+                  <p className="mt-2 text-muted-foreground">per user/month</p>
+                  <ul className="mt-6 space-y-4 text-left">
+                    <li className="flex items-center">
+                      <CheckIcon className="mr-2 h-5 w-5 text-primary" />
+                      <span>Custum range of  participants</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckIcon className="mr-2 h-5 w-5 text-primary" />
+                      <span>Unlimited cloud storage</span>
+                    </li>
+                    <li className="flex items-center">
+                      <CheckIcon className="mr-2 h-5 w-5 text-primary" />
+                      <span>Advanced meeting features</span>
+                    </li>
+                  </ul>
+                  <Button className="mt-6 w-full">Get Started</Button>
                 </div>
               </div>
             </div>
