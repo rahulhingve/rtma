@@ -1,4 +1,4 @@
-import { LoginPage } from '@/app/components/login-page'
+import { LoginPage } from '@/components/login-page'
 import { getServerSession } from 'next-auth'
 import React from 'react'
 import { authOptions } from '../api/auth/[...nextauth]/options'
