@@ -9,6 +9,7 @@ import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
 import { signOut, useSession } from "next-auth/react"
 import { authOptions } from "../(pages)/api/auth/[...nextauth]/options"
+import { CalendarIcon, CheckIcon, LockIcon, RepeatIcon, ShareIcon, VideoIcon, WebcamIcon } from "./ui/SvgIcons"
 
 export default function LandingPage() {
   const { data: session } = useSession(authOptions);
@@ -52,7 +53,7 @@ export default function LandingPage() {
             </Link>
           </nav>
           <div className="">
-            {session ? <div className="flex items-center gap-2">Hello&nbsp;<b>{session.user?.name}</b>  <Avatar ><AvatarImage className="rounded-lg" src={session.user?.image}/><AvatarFallback>{session.user?.name[0]}</AvatarFallback></Avatar> <Button className="rounded-xl bg-[#c9ebf7] px-4 py-2 text-sm font-medium text-[#2c3844] transition-colors hover:bg-[#c9ebf7]/90 focus:outline-none focus:ring-2 focus:ring-[#c9ebf7] focus:ring-offset-2" onClick={()=>{
+            {session ? <div className="flex items-center gap-2">Hello&nbsp;<b>{session.user?.name}</b>  <Avatar ><AvatarImage className="rounded-lg" src={session.user?.image || undefined} /><AvatarFallback>{session.user?.name ? session.user?.name[0] : ""}</AvatarFallback></Avatar> <Button className="rounded-xl bg-[#c9ebf7] px-4 py-2 text-sm font-medium text-[#2c3844] transition-colors hover:bg-[#c9ebf7]/90 focus:outline-none focus:ring-2 focus:ring-[#c9ebf7] focus:ring-offset-2" onClick={() => {
               signOut()
             }}>Logout</Button>  </div> : <div className=" flex items-center gap-2"><Link
               href="/signin"
@@ -344,159 +345,4 @@ export default function LandingPage() {
       </footer>
     </div>
   )
-}
-
-function CalendarIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M8 2v4" />
-      <path d="M16 2v4" />
-      <rect width="18" height="18" x="3" y="4" rx="2" />
-      <path d="M3 10h18" />
-    </svg>
-  )
-}
-
-
-function CheckIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M20 6 9 17l-5-5" />
-    </svg>
-  )
-}
-
-
-
-
-
-function LockIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
-      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-    </svg>
-  )
-}
-
-
-function RepeatIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m17 2 4 4-4 4" />
-      <path d="M3 11v-1a4 4 0 0 1 4-4h14" />
-      <path d="m7 22-4-4 4-4" />
-      <path d="M21 13v1a4 4 0 0 1-4 4H3" />
-    </svg>
-  )
-}
-
-
-function ShareIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
-      <polyline points="16 6 12 2 8 6" />
-      <line x1="12" x2="12" y1="2" y2="15" />
-    </svg>
-  )
-}
-
-
-function VideoIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5" />
-      <rect x="2" y="6" width="14" height="12" rx="2" />
-    </svg>
-  )
-}
-
-
-function WebcamIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <circle cx="12" cy="10" r="8" />
-      <circle cx="12" cy="10" r="3" />
-      <path d="M7 22h10" />
-      <path d="M12 22v-4" />
-    </svg>
-  )
-}
+};
