@@ -2,7 +2,7 @@
 import { Meeting } from '@/components/meeting'
 import { getServerSession } from 'next-auth'
 import React from 'react'
-import { authOptions } from '../api/auth/[...nextauth]/options'
+import { authOptions } from '../(pages)/api/auth/[...nextauth]/options'
 import { redirect } from 'next/navigation'
 
 

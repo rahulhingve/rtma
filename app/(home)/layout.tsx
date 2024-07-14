@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar'
 import Sidebar from '@/components/Sidebar'
 import { getServerSession } from 'next-auth'
 import React, { ReactNode } from 'react'
-import { authOptions } from '../api/auth/[...nextauth]/options'
+import { authOptions } from '../(pages)/api/auth/[...nextauth]/options'
 import { redirect } from 'next/navigation'
 import StreamVideoProvider from '@/providers/StreamClientProvider'
 

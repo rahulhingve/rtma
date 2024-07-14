@@ -2,7 +2,7 @@
 import { StreamCall, StreamTheme } from '@stream-io/video-react-sdk'
 import { useSession } from 'next-auth/react'
 import React, { useState } from 'react'
-import { authOptions } from '../../../api/auth/[...nextauth]/options'
+import { authOptions } from '@/app/(pages)/api/auth/[...nextauth]/options'
 import MeetingSetup from '@/components/MeetingSetup'
 import MeetingRoom from '@/components/MeetingRoom'
 import { useCallById } from '@/hooks/useGetCallById'
