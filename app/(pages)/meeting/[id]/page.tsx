@@ -8,7 +8,7 @@ import MeetingRoom from '@/components/MeetingRoom'
 import { useCallById } from '@/hooks/useGetCallById'
 import Loader from '@/components/Loader'
 
-const Page = ({params}:{params:{id: string}}) => {
+const MeetingPage = ({params}:{params:{id: string}}) => {
 const {data: session} = useSession(authOptions);
 const [isSetupComplete , setIsSetupComplete] = useState(false);
 const {call , callLoading} = useCallById(params.id)
@@ -35,4 +35,4 @@ if(!session?.user||callLoading) return <Loader/>
   )
 }
 
-export default Page
+export default MeetingPage
