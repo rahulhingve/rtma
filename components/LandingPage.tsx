@@ -8,7 +8,7 @@ import { Button } from "./ui/button"
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
 import { signOut, useSession } from "next-auth/react"
-import { authOptions } from "@/app/(pages)/api/auth/[...nextauth]/options"
+import { authOptions } from '@/app/api/auth/[...nextauth]/options';
 import { CalendarIcon, CheckIcon, LockIcon, RepeatIcon, ShareIcon, VideoIcon, WebcamIcon } from "./ui/SvgIcons"
 
 export default function LandingPage() {

@@ -1,6 +1,6 @@
 'use client'
 import { tokenProvider } from '@/actions/stream.actions';
-import { authOptions } from '@/app/(pages)/api/auth/[...nextauth]/options';
+import { authOptions } from '@/app/api/auth/[...nextauth]/options';
 import Loader from '@/components/Loader';
 import { StreamVideo, StreamVideoClient } from '@stream-io/video-react-sdk';
 import { getServerSession } from 'next-auth';

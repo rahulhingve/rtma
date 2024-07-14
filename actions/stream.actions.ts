@@ -1,7 +1,7 @@
 'use server';
 
 
-import { authOptions } from '@/app/(pages)/api/auth/[...nextauth]/options';
+import { authOptions } from '@/app/api/auth/[...nextauth]/options';
 import { StreamClient } from '@stream-io/node-sdk';
 import { getServerSession } from 'next-auth';
 

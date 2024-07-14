@@ -5,7 +5,7 @@ import { BellIcon, VideoIcon } from './ui/SvgIcons'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar'
 import { Button } from './ui/button'
 import { signOut, useSession } from 'next-auth/react'
-import { authOptions } from '@/app/(pages)/api/auth/[...nextauth]/options'
+import { authOptions } from '@/app/api/auth/[...nextauth]/options';
 import { format } from 'date-fns'
 import MobileNav from './ui/MobileNav'
 
