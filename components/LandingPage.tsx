@@ -84,7 +84,7 @@ export default function LandingPage() {
                 </p>
                 <div className="animate-slidein [--slidein-delay:700ms] opacity-0 flex gap-4">
                   <Link
-                    href="/meeting"
+                    href="/home"
                     className="rounded-xl border bg-[#2c3844] px-6 py-3 text-sm font-medium text-[#eec3e8] transition-colors   hover:border hover:text-[#3d2930] hover:bg-[#eec3e8] hover:border-[#2c3844] "
                     prefetch={false}
                   >

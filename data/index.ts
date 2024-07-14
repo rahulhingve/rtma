@@ -3,27 +3,27 @@ import { VideoIcon , ProjectorIcon , CalendarClock ,CalendarArrowUp ,PlusIcon } 
 export const sidebarLinks = [
     {
         label:"Meetings",
-        route:"/meeting/home",
+        route:"/home",
         imgUrl: ProjectorIcon
     },
     {
         label:"Upcoming",
-        route:"/meeting/upcoming",
+        route:"/upcoming",
         imgUrl: CalendarClock
     },
     {
         label:"Previous",
-        route:"/meeting/previous",
+        route:"/previous",
         imgUrl: CalendarArrowUp
     },
     {
         label:"Recordings",
-        route:"/meeting/recordings",
+        route:"/recordings",
         imgUrl: VideoIcon
     },
     {
         label:"Personal Room",
-        route:"/meeting/personal-room",
+        route:"/personal-room",
         imgUrl: PlusIcon
     },
 ]

@@ -53,6 +53,22 @@ export const authOptions = {
 
 
         },
+        async session({session , token , user }){
+            if(session.user && user ){
+                session.user.id = user.id;
+            }else if(session.user && token) {
+                    session.user.id =token.sub;
+
+            }
+            return session
+        },
+        async jwt({ token, user }) {
+            if (user) {
+              token.id = user.id;
+            }
+            return token;
+          },
+        
         secret:process.env.NEXTAUTH_SECRET
     },
     
