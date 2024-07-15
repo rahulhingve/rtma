@@ -24,6 +24,7 @@
     "next-auth": "^4.24.7",
     "prisma": "^5.16.2",
     "react": "^18",
+    "react-datepicker": "^7.3.0",
     "react-dom": "^18",
     "react-toastify": "^10.0.5",
     "tailwind-merge": "^2.4.0",
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
+    "@types/react-datepicker": "^6.2.0",
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",

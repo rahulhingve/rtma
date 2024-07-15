@@ -6,7 +6,8 @@ import React, { ReactNode } from 'react'
 import { authOptions } from '@/app/api/auth/[...nextauth]/options';
 import { redirect } from 'next/navigation'
 import StreamVideoProvider from '@/providers/StreamClientProvider'
-
+import '@stream-io/video-react-sdk/dist/css/styles.css';
+import 'react-datepicker/dist/react-datepicker.css'
 
 
 

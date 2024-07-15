@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dialog"
 import { cn } from '@/lib/utils'
 import { Button } from './ui/button'
+import Image from 'next/image'
 
 
 interface MeetingModalProps {
@@ -39,7 +40,7 @@ const MeetingModal = ({ isOpen, onClose, title, className, children, handleClick
                     <Button className='bg-blue-1 focus-visible:ring-0 focus-visible:ring-offset-0' onClick={handleClick}>
                     {buttonIcon && (
                         
-                             <image  src={buttonIcon} alt="" width={72} heigth={72}/>
+                             <Image  src={buttonIcon} alt="button icon" width={13} height={13}/>
                         )} &nbsp;
                         {buttonText||'Schedule Meeting'}
                     </Button>

@@ -20,7 +20,7 @@ if(!session?.user||callLoading) return <Loader/>
     <StreamCall call={call}>
       <StreamTheme>
 {!isSetupComplete ? (
-  <MeetingSetup/>
+  <MeetingSetup setIsSetupComplete={setIsSetupComplete}/>
 ):(
   <MeetingRoom/>
 
