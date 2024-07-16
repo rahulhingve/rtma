@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import Loader from './Loader';
 import MeetingCard from './MeetingCard';
-import { useSession } from 'next-auth/react';
+
 const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
 
 
@@ -70,7 +70,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
       const noCallsMessage = getNoCallsMessage();
 
 
-const {data:session}= useSession();
+
 
 
     return (
